@@ -29,7 +29,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~assets/scss/tailwind.scss'],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -58,6 +58,7 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
+    'nuxt-webfontloader',
   ],
   /*
    ** Axios module configuration
@@ -74,4 +75,9 @@ export default {
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
+  webfontloader: {
+    google: {
+      families: ['Lato:400,700'], // Loads Lato font with weights 400 and 700
+    },
+  },
 }

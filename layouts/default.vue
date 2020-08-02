@@ -1,10 +1,25 @@
 <template>
   <div>
+    <SiteHeader />
     <Nuxt />
+    <Contact />
   </div>
 </template>
+<script>
+import SiteHeader from '../components/includes/Header.vue'
+import Contact from '../components/includes/Contact.vue'
 
-<style>
+export default {
+  components: {
+    SiteHeader,
+    Contact,
+  },
+  data() {
+    return {}
+  },
+}
+</script>
+<style lang="scss">
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -51,5 +66,17 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>
