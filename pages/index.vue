@@ -1,9 +1,10 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
-      <h1 class="title">
-        bluekey
+      <!-- <Logo /> -->
+      <h1 class="subtitle">
+        Welcome to Blue Key Property Management!
+        <span>How can we help?</span>
       </h1>
       <div class="links">
         <a
@@ -12,7 +13,7 @@
           rel="noopener noreferrer"
           class="button--green"
         >
-          Documentation
+          I Need A Home
         </a>
         <a
           href="https://github.com/nuxt/nuxt.js"
@@ -20,7 +21,7 @@
           rel="noopener noreferrer"
           class="button--grey"
         >
-          GitHub
+          I Need A Property Manager
         </a>
       </div>
     </div>
@@ -58,13 +59,21 @@ export default {}
 
 .subtitle {
   font-weight: 300;
-  font-size: 42px;
+  font-size: 32px;
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
+  /* span {
+    
+  } */
 }
 
 .links {
   padding-top: 15px;
+}
+</style>
+<style lang="scss" scoped>
+.container {
+  align-items: flex-start;
 }
 </style>

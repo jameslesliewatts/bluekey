@@ -28,6 +28,7 @@
       </ul>
     </nav>
     <div class="logo-container">
+      <h4>The Property Management Team of</h4>
       <img
         id="logo"
         src="@/assets/images/aspire-logo.png"
@@ -49,6 +50,7 @@ export default {}
 
   #logo {
     vertical-align: middle;
+    margin: 10px auto;
   }
 }
 @media screen and (max-width: 44em) {

@@ -7,7 +7,7 @@
             <span>Available Listings</span>
           </h2>
           <div v-for="(listing, index) in listings" :key="index">
-            <div>{{ listing }}</div>
+            <!-- <div>{{ listing }}</div> -->
             <SingleListing :listing="listing" />
           </div>
         </div>
@@ -19,6 +19,7 @@
 // import * as axios from '@nuxtjs/axios'
 import SingleListing from '../components/SingleListing.vue'
 
+const parseString = require('xml2js').parseStringPromise
 export default {
   components: {
     SingleListing,
@@ -29,22 +30,31 @@ export default {
     }
   },
   mounted() {
+    this.getListings()
     // eslint-disable-next-line global-require
-    const parseString = require('xml2js').parseString
-
-    this.$axios
-      .get(
+    // this.$axios
+    //   .get(
+    //     'http://jessicawatts.managebuilding.com/Resident/PublicPages/XMLRentals.ashx?listings=all'
+    //   )
+    //   .then((response) => {
+    //     parseString(response.data)
+    //       .then((result) => {
+    //         const self = this
+    //         self.listings = result.PhysicalProperty.Property
+    //         console.log(`!!LISTINGS ARE ${self.listings}`)
+    //       })
+    //       .catch((err) => err)
+    //   })
+  },
+  methods: {
+    async getListings() {
+      const res = await this.$axios.get(
         'http://jessicawatts.managebuilding.com/Resident/PublicPages/XMLRentals.ashx?listings=all'
       )
-      .then((response) => {
-        parseString(response.data)
-          .then((result) => {
-            const self = this
-            self.listings = result.PhysicalProperty.Property
-            console.log(`!!LISTINGS ARE ${self.listings}`)
-          })
-          .catch((err) => err)
-      })
+      const result = await parseString(res.data)
+      this.listings = result.PhysicalProperty.Property
+      console.log(this.listings)
+    },
   },
 }
 </script>

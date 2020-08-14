@@ -3,7 +3,7 @@
     <div
       class="text-center single-listing"
       :style="{
-        backgroundImage: `url('${listing.Floorplan[0].File[0].Src[0]}')`,
+        backgroundImage: `${bgImage}`,
       }"
     >
       <h2 class="listing-address">
@@ -28,8 +28,19 @@ export default {
   props: {
     listing: {
       type: Object,
-      default: () => {},
+      default: null,
     },
+  },
+  data() {
+    return {
+      bgImage: '',
+    }
+  },
+  beforeMount() {
+    this.bgImage =
+      typeof this.listing.Floorplan[0].File === 'undefined'
+        ? null
+        : `url('${this.listing.Floorplan[0].File[0].Src[0]}')`
   },
   // beforeMount: function imageExists() {
   //   // console.log(this.listing.Floorplan[0].File[0].Src[0]);
