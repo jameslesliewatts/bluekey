@@ -10,23 +10,27 @@
         Below are some basic house rules along with how to contact us and some
         other information that might be useful.
       </p>
-      <Fountain />
+      <component :is="component" />
     </div>
   </div>
 </template>
 <script>
-import Fountain from './Fountain'
-
 export default {
-  components: {
-    Fountain,
-  },
   data() {
     return {
       verified: false,
       password: '',
       correctPasswords: ['223@Fountain'],
     }
+  },
+  computed: {
+    component() {
+      return () => {
+        if (this.$route.params.prop) {
+          return import(`./${this.$route.params.prop}`)
+        }
+      }
+    },
   },
   methods: {
     verifyPassword() {
