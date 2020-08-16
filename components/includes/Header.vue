@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 <template>
-  <div>
+  <div id="main-nav">
     <input id="menu" type="checkbox" />
     <label for="menu" onclick></label>
 
@@ -27,6 +27,7 @@
         </li>
       </ul>
     </nav>
+    <br />
     <div class="logo-container">
       <h4>The Property Management Team of</h4>
       <img
@@ -44,10 +45,15 @@ export default {}
 </script>
 
 <style lang="scss">
+#main-nav {
+  width: 100vw;
+  display: block;
+}
 .logo-container {
+  margin-top: 130px;
   height: 100%;
   text-align: center;
-
+  width: 100vw;
   #logo {
     vertical-align: middle;
     margin: 10px auto;

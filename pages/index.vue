@@ -2,9 +2,9 @@
   <div class="container">
     <div>
       <!-- <Logo /> -->
-      <h1 class="subtitle">
-        Welcome to Blue Key Property Management!
-        <span>How can we help?</span>
+      <h1 class="subtitle welcome-message">
+        Welcome to Blue Key Property Management!<br />
+        <span class="help-question">How can we help?</span>
       </h1>
       <div class="links">
         <a
@@ -32,7 +32,7 @@
 export default {}
 </script>
 
-<style>
+<style lang="scss">
 /* Sample `apply` at-rules with Tailwind CSS
 .container {
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
@@ -59,15 +59,18 @@ export default {}
 
 .subtitle {
   font-weight: 300;
-  font-size: 32px;
+  font-size: 24px;
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
-  /* span {
-    
-  } */
+  &.welcome-message {
+    text-decoration: underline;
+  }
+  span.help-question {
+    color: #333;
+    text-decoration: unset;
+  }
 }
-
 .links {
   padding-top: 15px;
 }
