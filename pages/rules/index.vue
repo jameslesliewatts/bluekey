@@ -10,20 +10,30 @@
         Below are some basic house rules along with how to contact us and some
         other information that might be useful.
       </p>
-      <component :is="component" />
+      <h2>General</h2>
+      <div v-for="(rule, index) in rules.all" :key="index">
+        &bull; {{ rule }}
+      </div>
+      <h2>Fountain</h2>
+      <div v-for="rule in rules.fountain" :key="rule.key">
+        &bull; {{ rule }}
+      </div>
     </div>
   </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 export default {
   data() {
     return {
       verified: false,
       password: '',
+      rules: {},
       correctPasswords: ['223@Fountain'],
     }
   },
   computed: {
+    ...mapGetters(['getRules']),
     component() {
       return () => {
         if (this.$route.params.prop) {
@@ -31,6 +41,10 @@ export default {
         }
       }
     },
+  },
+  mounted() {
+    this.rules = this.getRules
+    console.log(this.rules)
   },
   methods: {
     verifyPassword() {
@@ -42,5 +56,17 @@ export default {
 <style lang="scss">
 .blurred {
   filter: blur(5px);
+  font-weight: regular;
+}
+.container {
+  text-align: center;
+}
+h2 {
+  font-weight: 700;
+  font-size: 20px;
+}
+input {
+  border: 1px solid #000;
+  border-radius: 5px;
 }
 </style>

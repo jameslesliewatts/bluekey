@@ -1,23 +1,35 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
-
-Vue.use(Vuex)
+import rules from '../pages/rules/rules.json'
 
 export const state = () => ({
-  counter: 0,
+  listings: {},
+  rules: {},
 })
 
+export const getters = {
+  getListings(state) {
+    return state.listings
+  },
+  getRules(state) {
+    return state.rules
+  },
+}
 export const mutations = {
-  increment(state) {
-    state.counter++
+  setListings(state, payload) {
+    state.listings = payload
+  },
+  setRules(state, payload) {
+    state.rules = payload
   },
 }
 
 export const actions = {
-  async getListings() {
+  async nuxtServerInit({ state, dispatch, commit }) {
+    const parseString = require('xml2js').parseStringPromise
     const res = await this.$axios.get(
       'http://jessicawatts.managebuilding.com/Resident/PublicPages/XMLRentals.ashx?listings=all'
     )
-    return res
+    const result = await parseString(res.data)
+    commit('setListings', result.PhysicalProperty.Property)
+    commit('setRules', rules)
   },
 }

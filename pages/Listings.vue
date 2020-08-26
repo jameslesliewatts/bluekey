@@ -17,9 +17,10 @@
 </template>
 <script>
 // import * as axios from '@nuxtjs/axios'
+import { mapGetters } from 'vuex'
 import SingleListing from '../components/SingleListing.vue'
 
-const parseString = require('xml2js').parseStringPromise
+// const parseString = require('xml2js').parseStringPromise
 export default {
   components: {
     SingleListing,
@@ -29,8 +30,13 @@ export default {
       listings: [],
     }
   },
+  computed: {
+    ...mapGetters(['getListings']),
+  },
   mounted() {
-    this.getListings()
+    this.listings = this.getListings
+    // eslint-disable-next-line no-console
+    console.log(this.listings)
     // eslint-disable-next-line global-require
     // this.$axios
     //   .get(
@@ -47,14 +53,15 @@ export default {
     //   })
   },
   methods: {
-    async getListings() {
-      const res = await this.$axios.get(
-        'http://jessicawatts.managebuilding.com/Resident/PublicPages/XMLRentals.ashx?listings=all'
-      )
-      const result = await parseString(res.data)
-      this.listings = result.PhysicalProperty.Property
-      console.log(this.listings)
-    },
+    //   async getListings() {
+    //     const res = await this.$axios.get(
+    //       'http://jessicawatts.managebuilding.com/Resident/PublicPages/XMLRentals.ashx?listings=all'
+    //     )
+    //     const result = await parseString(res.data)
+    //     this.listings = result.PhysicalProperty.Property
+    //     console.log(this.listings)
+    //   },
+    // },
   },
 }
 </script>
