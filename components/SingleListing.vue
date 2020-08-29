@@ -7,19 +7,12 @@
       }"
     >
       <h2 class="listing-address">
-        {{ listing.PropertyID[0].Address[0].Address[0] }}
+        {{ address }}
       </h2>
-      <p class="listing-price">
-        ${{ listing.Floorplan[0].MarketRent[0].$.Max }}/month
-      </p>
+      <p class="listing-price">${{ price }}/month</p>
       <p class="listing-info">
         Learn More
       </p>
-
-      <!-- <div v-if="imageExists" class="text-center"> -->
-      <!-- <img :src="listing.Floorplan[0].File[0].Src[0]" class="house-image" /> -->
-      <!-- <h1>Image Exists</h1> -->
-      <!-- </div> -->
     </div>
   </div>
 </template>
@@ -34,6 +27,8 @@ export default {
   data() {
     return {
       bgImage: '',
+      address: this.listing.PropertyID[0].Address[0].Address[0],
+      price: this.listing.Floorplan[0].MarketRent[0].$.Max,
     }
   },
   beforeMount() {
@@ -42,16 +37,6 @@ export default {
         ? null
         : `url('${this.listing.Floorplan[0].File[0].Src[0]}')`
   },
-  // beforeMount: function imageExists() {
-  //   // console.log(this.listing.Floorplan[0].File[0].Src[0]);
-  //   try {
-  //     if (typeof this.listing.Floorplan[0].File[0].Src[0] != undefined) {
-  //       return true;
-  //     }
-  //   } catch (error) {
-  //     return false;
-  //   }
-  // },
 }
 </script>
 <style>

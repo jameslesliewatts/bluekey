@@ -7,22 +7,22 @@
         <span class="help-question">How can we help?</span>
       </h1>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
+        <nuxt-link
+          to="Listings"
           target="_blank"
           rel="noopener noreferrer"
           class="button--green"
         >
           I Need A Home
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
+        </nuxt-link>
+        <nuxt-link
+          to="About"
           target="_blank"
           rel="noopener noreferrer"
           class="button--grey"
         >
           I Need A Property Manager
-        </a>
+        </nuxt-link>
       </div>
     </div>
   </div>

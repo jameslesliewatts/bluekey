@@ -29,7 +29,8 @@ export const actions = {
       'http://jessicawatts.managebuilding.com/Resident/PublicPages/XMLRentals.ashx?listings=all'
     )
     const result = await parseString(res.data)
-    commit('setListings', result.PhysicalProperty.Property)
+    const property = result.PhysicalProperty.Property
+    commit('setListings', property)
     commit('setRules', rules)
   },
 }
