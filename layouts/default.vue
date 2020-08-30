@@ -1,18 +1,21 @@
 <template>
   <div>
-    <SiteHeader />
-    <Nuxt />
-    <Contact />
+    <site-header />
+    <nuxt />
+    <contact />
+    <site-footer />
   </div>
 </template>
 <script>
 import SiteHeader from '../components/includes/Header.vue'
 import Contact from '../components/includes/Contact.vue'
+import SiteFooter from '../components/includes/Footer.vue'
 
 export default {
   components: {
     SiteHeader,
     Contact,
+    SiteFooter,
   },
   data() {
     return {}
@@ -30,6 +33,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *,
