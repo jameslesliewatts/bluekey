@@ -9,6 +9,11 @@ export const getters = {
   getListings(state) {
     return state.listings
   },
+  getListingById: (state) => (id) => {
+    return state.listings.find(
+      (listing) => listing.PropertyID.Identification.IDValue === id
+    )
+  },
   getRules(state) {
     return state.rules
   },

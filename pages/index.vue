@@ -24,16 +24,12 @@
           I Need A Property Manager
         </nuxt-link>
         <div class="social">
-          <script
-            src="https://assets.juicer.io/embed.js"
-            type="text/javascript"
-          ></script>
-          <link
+          <!-- <link
             href="https://assets.juicer.io/embed.css"
             media="all"
             rel="stylesheet"
             type="text/css"
-          />
+          /> -->
           <ul class="juicer-feed" data-feed-id="rentlittlerock">
             <h1 class="referral">
               <!-- <a href="https://www.juicer.io">Powered by Juicer.io</a> -->
@@ -46,10 +42,24 @@
 </template>
 
 <script>
-export default {}
+export default {
+  created() {
+    this.loadScripts()
+  },
+  methods: {
+    loadScripts() {
+      if (process.client) {
+        const tag = document.createElement('script')
+        tag.setAttribute('src', 'https://assets.juicer.io/embed.js')
+        document.head.appendChild(tag)
+      }
+    },
+  },
+}
 </script>
 
 <style lang="scss">
+@import url(https://assets.juicer.io/embed.css);
 /* Sample `apply` at-rules with Tailwind CSS
 .container {
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
