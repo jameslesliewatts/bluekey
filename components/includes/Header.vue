@@ -13,7 +13,7 @@
           <nuxt-link :to="{ name: 'About' }">About</nuxt-link>
         </li>
         <li>
-          <nuxt-link :to="{ name: 'Listings' }">For Rent</nuxt-link>
+          <nuxt-link :to="{ name: 'ForRent' }">For Rent</nuxt-link>
         </li>
         <li>
           <router-link :to="{ name: 'Furnished' }">Our City</router-link>

@@ -9,6 +9,11 @@ export const getters = {
   getListings(state) {
     return state.listings
   },
+  getListingById: (state) => (id) => {
+    return state.listings.find(
+      (listing) => listing.PropertyID.Identification.IDValue === id
+    )
+  },
   getRules(state) {
     return state.rules
   },
@@ -29,7 +34,8 @@ export const actions = {
       'http://jessicawatts.managebuilding.com/Resident/PublicPages/XMLRentals.ashx?listings=all'
     )
     const result = await parseString(res.data)
-    commit('setListings', result.PhysicalProperty.Property)
+    const property = result.PhysicalProperty.Property
+    commit('setListings', property)
     commit('setRules', rules)
   },
 }

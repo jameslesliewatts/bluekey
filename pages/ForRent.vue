@@ -16,3 +16,8 @@
     </div>
   </div>
 </template>
+<style lang="scss">
+iframe {
+  margin: 0 auto;
+}
+</style>
