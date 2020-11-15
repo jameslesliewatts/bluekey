@@ -13,9 +13,9 @@
     <div class="column right">Right</div>
   </div>
 </template>
-<style lang="scss" scoped>
+<style lang="scss">
 .footer {
-  background-color: #06446c;
+  background-color: $bluekey-blue;
   display: flex;
   justify-content: space-between;
   padding: 4vw;
@@ -23,6 +23,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
+  height: $footer-height;
   .column {
     // width: 30vw;
     color: #fff;

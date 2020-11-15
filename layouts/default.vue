@@ -25,6 +25,8 @@ export default {
 }
 </script>
 <style lang="scss">
+@import '@/assets/scss/main';
+
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -74,15 +76,11 @@ html {
   background-color: #35495e;
 }
 .main-layout-container {
-  $footer-height: 200px;
   position: relative;
   min-height: 100vh;
   .main-content {
     padding-bottom: $footer-height;
     text-align: center;
-  }
-  site-footer {
-    height: $footer-height;
   }
 }
 #nav {

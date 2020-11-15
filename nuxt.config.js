@@ -60,6 +60,7 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
+    '@nuxtjs/style-resources',
     'nuxt-webfontloader',
   ],
   /*
@@ -83,5 +84,8 @@ export default {
     google: {
       families: ['Lato:400,700'], // Loads Lato font with weights 400 and 700
     },
+  },
+  styleResources: {
+    scss: ['~/assets/scss/vars.scss'],
   },
 }

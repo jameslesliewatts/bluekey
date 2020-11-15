@@ -3,7 +3,7 @@
     <div>
       <!-- <Logo /> -->
       <h1 class="subtitle welcome-message">
-        Welcome to Blue Key Property Management!
+        Welcome to<br />Blue Key Property Management!
       </h1>
       <br />
       <span class="subtitle help-question">How can we help?</span>
@@ -96,11 +96,7 @@ export default {
 
 <style lang="scss">
 @import url(https://assets.juicer.io/embed.css);
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
+
 .container {
   margin: 0 auto;
   min-height: 100vh;
