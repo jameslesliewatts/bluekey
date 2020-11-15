@@ -32,9 +32,9 @@
       <h4>The Property Management Team of</h4>
       <img
         id="logo"
-        src="@/assets/images/aspire-logo.png"
+        src="@/assets/images/aspire-logo-blue.png"
         alt="logo"
-        width="200"
+        width="150"
       />
     </div>
   </div>

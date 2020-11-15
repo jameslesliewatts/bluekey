@@ -3,34 +3,70 @@
     <div>
       <!-- <Logo /> -->
       <h1 class="subtitle welcome-message">
-        Welcome to Blue Key Property Management!<br />
-        <span class="help-question">How can we help?</span>
+        Welcome to Blue Key Property Management!
       </h1>
+      <br />
+      <span class="subtitle help-question">How can we help?</span>
       <div class="links">
         <nuxt-link
           to="Listings"
           target="_blank"
           rel="noopener noreferrer"
           class="button--green"
+          >I Need A Home</nuxt-link
         >
-          I Need A Home
-        </nuxt-link>
         <nuxt-link
           to="About"
           target="_blank"
           rel="noopener noreferrer"
           class="button--grey"
+          >I Need A Property Manager</nuxt-link
         >
-          I Need A Property Manager
-        </nuxt-link>
         <div class="social">
           <!-- <link
             href="https://assets.juicer.io/embed.css"
             media="all"
             rel="stylesheet"
             type="text/css"
+          />-->
+          <!-- <ul class="juicer-feed" data-feed-id="rentlittlerock">
+          <h1 class="referral">-->
+          <!-- <a href="https://www.juicer.io">Powered by Juicer.io</a> -->
+          <!-- </h1>
+          </ul>-->
+          <!-- <iframe
+            src="https://www.juicer.io/api/feeds/rentlittlerock/iframe"
+            frameborder="0"
+            height="300"
+            style="display: block; margin: 0 auto; width: 100%;"
+          ></iframe> -->
+          <!-- <script
+            src="https://assets.juicer.io/embed.js"
+            type="text/javascript"
+          ></script> -->
+          <!-- <link
+            href="https://assets.juicer.io/embed.css"
+            media="all"
+            rel="stylesheet"
+            type="text/css"
           /> -->
-          <ul class="juicer-feed" data-feed-id="rentlittlerock">
+          <!-- <script
+            src="https://assets.juicer.io/embed.js"
+            type="text/javascript"
+          ></script> -->
+          <!-- <link
+            href="https://assets.juicer.io/embed.css"
+            media="all"
+            rel="stylesheet"
+            type="text/css"
+          /> -->
+          <ul
+            class="juicer-feed"
+            data-feed-id="rentlittlerock"
+            data-truncate="100"
+            data-pages="2"
+            data-per="3"
+          >
             <h1 class="referral">
               <!-- <a href="https://www.juicer.io">Powered by Juicer.io</a> -->
             </h1>
@@ -44,15 +80,15 @@
 <script>
 export default {
   created() {
-    this.loadScripts()
+    if (process.client) {
+      this.loadScripts()
+    }
   },
   methods: {
     loadScripts() {
-      if (process.client) {
-        const tag = document.createElement('script')
-        tag.setAttribute('src', 'https://assets.juicer.io/embed.js')
-        document.head.appendChild(tag)
-      }
+      const tag = document.createElement('script')
+      tag.setAttribute('src', 'https://assets.juicer.io/embed.js')
+      document.head.appendChild(tag)
     },
   },
 }
@@ -91,7 +127,7 @@ export default {
   word-spacing: 5px;
   padding-bottom: 15px;
   &.welcome-message {
-    text-decoration: underline;
+    text-decoration: none;
   }
   span.help-question {
     color: #333;

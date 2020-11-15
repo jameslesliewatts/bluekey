@@ -1,9 +1,32 @@
 <template>
-  <div class="footer"></div>
+  <div class="footer">
+    <div class="column left">
+      <p>
+        <strong>Blue Key Property Mgmt.</strong><br />
+        A Division of
+        <a href="http://www.aspirerealtylr.com/" target="_blank"
+          >Aspire Realty</a
+        >
+      </p>
+    </div>
+    <div class="column center">Center</div>
+    <div class="column right">Right</div>
+  </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 .footer {
-  background-color: #6d6e72;
-  height: 400px;
+  background-color: #06446c;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  padding: 4vw;
+  position: ab;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  .column {
+    // width: 30vw;
+    color: #fff;
+  }
 }
 </style>
