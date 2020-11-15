@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <site-header />
-    <nuxt />
-    <contact />
+  <div class="main-layout-container">
+    <div class="main-content">
+      <site-header />
+      <nuxt />
+      <contact />
+    </div>
     <site-footer />
   </div>
 </template>
@@ -70,6 +72,18 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+.main-layout-container {
+  $footer-height: 200px;
+  position: relative;
+  min-height: 100vh;
+  .main-content {
+    padding-bottom: $footer-height;
+    text-align: center;
+  }
+  site-footer {
+    height: $footer-height;
+  }
 }
 #nav {
   padding: 30px;

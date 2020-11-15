@@ -16,11 +16,10 @@
 <style lang="scss" scoped>
 .footer {
   background-color: #06446c;
-  height: 300px;
   display: flex;
   justify-content: space-between;
   padding: 4vw;
-  position: ab;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
