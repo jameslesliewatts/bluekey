@@ -2,10 +2,10 @@
   <div class="container">
     <div>
       <!-- <Logo /> -->
-      <h1 class="subtitle welcome-message">
+      <!-- <h1 class="subtitle welcome-message">
         Welcome to<br />Blue Key Property Management!
-      </h1>
-      <br />
+      </h1> -->
+      <!-- <br /> -->
       <span class="subtitle help-question">How can we help?</span>
       <div class="links">
         <nuxt-link
@@ -64,7 +64,7 @@
             class="juicer-feed"
             data-feed-id="rentlittlerock"
             data-truncate="100"
-            data-pages="2"
+            data-pages="1"
             data-per="3"
           >
             <h1 class="referral">
@@ -112,7 +112,7 @@ export default {
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  color: $bluekey-blue;
   letter-spacing: 1px;
 }
 
@@ -130,6 +130,7 @@ export default {
     text-decoration: unset;
   }
 }
+
 .links {
   padding-top: 15px;
 }
