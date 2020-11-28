@@ -63,7 +63,7 @@ export default {
 }
 h2 {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.3rem;
 }
 input {
   border: 1px solid #000;

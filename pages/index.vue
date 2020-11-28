@@ -1,77 +1,82 @@
 <template>
   <div class="container">
+    <div class="headline">
+      Blue Key Property Mgmt.
+    </div>
     <div>
-      <!-- <Logo /> -->
-      <!-- <h1 class="subtitle welcome-message">
-        Welcome to<br />Blue Key Property Management!
-      </h1> -->
-      <!-- <br /> -->
-      <span class="subtitle help-question">How can we help?</span>
-      <div class="links">
+      <div class="links parallax">
         <nuxt-link
           to="Listings"
           target="_blank"
           rel="noopener noreferrer"
-          class="button--green"
+          class="btn btn-secondary"
           >I Need A Home</nuxt-link
         >
         <nuxt-link
           to="About"
           target="_blank"
           rel="noopener noreferrer"
-          class="button--grey"
+          class="btn btn-secondary"
           >I Need A Property Manager</nuxt-link
         >
-        <div class="social">
-          <!-- <link
+        <script
+          async
+          src="https://www.rentometer.com/leadgen/load.js?api_key=zgmY1IiRLuym_7mbzouOow"
+        ></script>
+        <div
+          class="rentometer-leadgen"
+          data-button-text="FREE Rent Analysis"
+        ></div>
+      </div>
+      <div class="social">
+        <!-- <link
             href="https://assets.juicer.io/embed.css"
             media="all"
             rel="stylesheet"
             type="text/css"
           />-->
-          <!-- <ul class="juicer-feed" data-feed-id="rentlittlerock">
+        <!-- <ul class="juicer-feed" data-feed-id="rentlittlerock">
           <h1 class="referral">-->
-          <!-- <a href="https://www.juicer.io">Powered by Juicer.io</a> -->
-          <!-- </h1>
+        <!-- <a href="https://www.juicer.io">Powered by Juicer.io</a> -->
+        <!-- </h1>
           </ul>-->
-          <!-- <iframe
+        <!-- <iframe
             src="https://www.juicer.io/api/feeds/rentlittlerock/iframe"
             frameborder="0"
             height="300"
             style="display: block; margin: 0 auto; width: 100%;"
           ></iframe> -->
-          <!-- <script
+        <!-- <script
             src="https://assets.juicer.io/embed.js"
             type="text/javascript"
           ></script> -->
-          <!-- <link
+        <!-- <link
             href="https://assets.juicer.io/embed.css"
             media="all"
             rel="stylesheet"
             type="text/css"
           /> -->
-          <!-- <script
+        <!-- <script
             src="https://assets.juicer.io/embed.js"
             type="text/javascript"
           ></script> -->
-          <!-- <link
+        <!-- <link
             href="https://assets.juicer.io/embed.css"
             media="all"
             rel="stylesheet"
             type="text/css"
           /> -->
-          <ul
-            class="juicer-feed"
-            data-feed-id="rentlittlerock"
-            data-truncate="100"
-            data-pages="1"
-            data-per="3"
-          >
-            <h1 class="referral">
-              <!-- <a href="https://www.juicer.io">Powered by Juicer.io</a> -->
-            </h1>
-          </ul>
-        </div>
+        <ul
+          class="juicer-feed"
+          data-feed-id="rentlittlerock"
+          data-truncate="100"
+          data-pages="1"
+          data-per="3"
+        >
+          <h1 class="referral">
+            <!-- <a href="https://www.juicer.io">Powered by Juicer.io</a> -->
+          </h1>
+        </ul>
       </div>
     </div>
   </div>
@@ -94,53 +99,79 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import url(https://assets.juicer.io/embed.css);
 
 .container {
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  .headline {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: 'OptiFutura', sans-serif;
+    margin: 30px 0;
+  }
 }
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: $bluekey-blue;
-  letter-spacing: 1px;
-}
-
 .subtitle {
-  font-weight: 300;
-  font-size: 24px;
-  color: #526488;
+  font-weight: 700;
+  font-size: 3rem;
+  color: $bk-dark;
   word-spacing: 5px;
-  padding-bottom: 15px;
-  &.welcome-message {
-    text-decoration: none;
-  }
-  span.help-question {
-    color: #333;
-    text-decoration: unset;
-  }
+  font-family: 'OptiFutura', sans-serif;
+  margin-bottom: 10px;
 }
-
+.parallax {
+  background-image: linear-gradient($bk-primary-opacity, $bk-primary-opacity),
+    url('../assets/images/overhead-background.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .links {
-  padding-top: 15px;
-}
-</style>
-<style lang="scss" scoped>
-.container {
-  align-items: flex-start;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 10vw;
+  margin-top: 20px;
+  height: 50vh;
+  max-height: 500px;
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
+  .btn {
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: $bk-primary;
+    margin-right: 10px;
+    white-space: nowrap;
+    &:hover {
+      background: $bk-red;
+      border-color: $bk-red;
+      color: #fff;
+      transform: scale(1.05);
+    }
+    @media screen and (max-width: 700px) {
+      margin-bottom: 10px;
+    }
+  }
+
+  // THIS OVERWRITES STYLES FOR RENTOMETER BUTTON
+  /deep/ #romLeadGenBtn0 {
+    font-size: 1.1rem !important;
+    @extend .btn;
+  }
 }
 .social {
-  padding: 20px;
-  // max-width: 100vw;
+  padding: 40px;
 }
 </style>

@@ -15,7 +15,7 @@
 </template>
 <style lang="scss">
 .footer {
-  background-color: $bluekey-blue;
+  background-color: $bk-primary;
   display: flex;
   justify-content: space-between;
   padding: 4vw;
