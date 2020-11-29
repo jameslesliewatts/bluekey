@@ -47,8 +47,6 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    // '@nuxtjs/tailwindcss',
     '@nuxtjs/dotenv',
   ],
   /*
@@ -86,6 +84,6 @@ export default {
     },
   },
   styleResources: {
-    scss: ['~/assets/scss/vars.scss'],
+    scss: ['~/assets/scss/vars.scss', '~/assets/scss/main.scss'],
   },
 }

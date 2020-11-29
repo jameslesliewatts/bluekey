@@ -28,56 +28,6 @@
           data-button-text="FREE Rent Analysis"
         ></div>
       </div>
-      <div class="social">
-        <!-- <link
-            href="https://assets.juicer.io/embed.css"
-            media="all"
-            rel="stylesheet"
-            type="text/css"
-          />-->
-        <!-- <ul class="juicer-feed" data-feed-id="rentlittlerock">
-          <h1 class="referral">-->
-        <!-- <a href="https://www.juicer.io">Powered by Juicer.io</a> -->
-        <!-- </h1>
-          </ul>-->
-        <!-- <iframe
-            src="https://www.juicer.io/api/feeds/rentlittlerock/iframe"
-            frameborder="0"
-            height="300"
-            style="display: block; margin: 0 auto; width: 100%;"
-          ></iframe> -->
-        <!-- <script
-            src="https://assets.juicer.io/embed.js"
-            type="text/javascript"
-          ></script> -->
-        <!-- <link
-            href="https://assets.juicer.io/embed.css"
-            media="all"
-            rel="stylesheet"
-            type="text/css"
-          /> -->
-        <!-- <script
-            src="https://assets.juicer.io/embed.js"
-            type="text/javascript"
-          ></script> -->
-        <!-- <link
-            href="https://assets.juicer.io/embed.css"
-            media="all"
-            rel="stylesheet"
-            type="text/css"
-          /> -->
-        <ul
-          class="juicer-feed"
-          data-feed-id="rentlittlerock"
-          data-truncate="100"
-          data-pages="1"
-          data-per="3"
-        >
-          <h1 class="referral">
-            <!-- <a href="https://www.juicer.io">Powered by Juicer.io</a> -->
-          </h1>
-        </ul>
-      </div>
     </div>
   </div>
 </template>
@@ -145,21 +95,8 @@ export default {
     flex-direction: column;
   }
   .btn {
-    border-radius: 4px;
-    text-decoration: none;
-    padding: 15px 25px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: #fff;
-    background-color: $bk-primary;
+    @extend .primary-button;
     margin-right: 10px;
-    white-space: nowrap;
-    &:hover {
-      background: $bk-red;
-      border-color: $bk-red;
-      color: #fff;
-      transform: scale(1.05);
-    }
     @media screen and (max-width: 700px) {
       margin-bottom: 10px;
     }
@@ -173,5 +110,8 @@ export default {
 }
 .social {
   padding: 40px;
+  .juicer-feed {
+    width: 90%;
+  }
 }
 </style>
