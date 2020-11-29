@@ -104,16 +104,17 @@ $nav-margin-small: 8px;
   @media screen and (min-width: 1232px) {
     .buffer-left,
     .buffer-right {
-      background: $bk-primary;
+      border: 1px solid $bk-primary;
       width: 100%;
       height: 333px;
       margin-top: $nav-margin-lg;
       min-width: $nav-margin-lg;
+      display: none;
     }
   }
 }
 .header-content {
-  max-width: 1200px;
+  max-width: $max-width;
   margin: 0 auto;
 }
 

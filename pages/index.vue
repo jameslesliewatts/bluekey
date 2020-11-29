@@ -3,115 +3,74 @@
     <div class="headline">
       Blue Key Property Mgmt.
     </div>
-    <div>
-      <div class="links parallax">
-        <nuxt-link
-          to="Listings"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-secondary"
-          >I Need A Home</nuxt-link
-        >
-        <nuxt-link
-          to="About"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-secondary"
-          >I Need A Property Manager</nuxt-link
-        >
-        <script
-          async
-          src="https://www.rentometer.com/leadgen/load.js?api_key=zgmY1IiRLuym_7mbzouOow"
-        ></script>
-        <div
-          class="rentometer-leadgen"
-          data-button-text="FREE Rent Analysis"
-        ></div>
-      </div>
+    <div class="links parallax">
+      <nuxt-link
+        to="Listings"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-secondary"
+        >I Need A Home</nuxt-link
+      >
+      <nuxt-link
+        to="About"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-secondary"
+        >I Need A Property Manager</nuxt-link
+      >
+      <script
+        async
+        src="https://www.rentometer.com/leadgen/load.js?api_key=zgmY1IiRLuym_7mbzouOow"
+      ></script>
+      <div
+        class="rentometer-leadgen"
+        data-button-text="FREE Rent Analysis"
+      ></div>
     </div>
+    <social-feed />
   </div>
 </template>
 
 <script>
+import SocialFeed from '../components/Social.vue'
+
 export default {
-  created() {
-    if (process.client) {
-      this.loadScripts()
-    }
-  },
-  methods: {
-    loadScripts() {
-      const tag = document.createElement('script')
-      tag.setAttribute('src', 'https://assets.juicer.io/embed.js')
-      document.head.appendChild(tag)
-    },
-  },
+  components: { SocialFeed },
 }
 </script>
 
 <style lang="scss" scoped>
-@import url(https://assets.juicer.io/embed.css);
-
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  .headline {
-    font-size: 4rem;
-    text-transform: uppercase;
-    font-family: 'OptiFutura', sans-serif;
-    margin: 30px 0;
-  }
-}
-.subtitle {
-  font-weight: 700;
-  font-size: 3rem;
-  color: $bk-dark;
-  word-spacing: 5px;
+.headline {
+  font-size: 4rem;
+  text-transform: uppercase;
   font-family: 'OptiFutura', sans-serif;
-  margin-bottom: 10px;
-}
-.parallax {
-  background-image: linear-gradient($bk-primary-opacity, $bk-primary-opacity),
-    url('../assets/images/overhead-background.png');
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  margin: 40px 0;
 }
 .links {
+  background-image: linear-gradient($bk-primary-opacity, $bk-primary-opacity),
+    url('../assets/images/overhead-background.png');
+  width: 100vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 20px 10vw;
-  margin-top: 20px;
   height: 50vh;
   max-height: 500px;
-  @media screen and (max-width: 700px) {
-    flex-direction: column;
-  }
+  margin-bottom: 40px;
   .btn {
     @extend .primary-button;
     margin-right: 10px;
-    @media screen and (max-width: 700px) {
+  }
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    .btn {
       margin-bottom: 10px;
     }
   }
-
   // THIS OVERWRITES STYLES FOR RENTOMETER BUTTON
   /deep/ #romLeadGenBtn0 {
     font-size: 1.1rem !important;
     @extend .btn;
-  }
-}
-.social {
-  padding: 40px;
-  .juicer-feed {
-    width: 90%;
   }
 }
 </style>

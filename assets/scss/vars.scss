@@ -6,6 +6,7 @@ $bk-secondary-opacity: #{$bk-secondary}80;
 $bk-dark: #032338;
 $bk-green: #017868;
 $bk-red: #B82C49;
+$aspire-green: #cddb00;
 
 $menu-red: hsla(11, 94%, 50%, 0.65);
 $menu-yellow: hsla(44, 94%, 50%, 0.65);
@@ -14,7 +15,8 @@ $menu-blue: hsla(184, 94%, 50%, 0.65);
 $menu-violet: hsla(224, 94%, 50%, 0.65);
 
 // HEIGHTS/WIDTHS
-$footer-height: 200px;
+$footer-height: 300px;
+$max-width: 1200px;
 
 $dark-blue: #2c3e50;
 // MIXINS

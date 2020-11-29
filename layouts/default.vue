@@ -31,7 +31,7 @@ export default {
   position: relative;
   min-height: 100vh;
   .main-content {
-    padding-bottom: $footer-height;
+    // padding-bottom: $footer-height;
     text-align: center;
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="contact">
     <form class="vue-form" @submit.prevent="submit">
       <!-- <div class="error-message">
         <p v-show="!email.valid">Oh, please enter a valid email address.</p>
@@ -27,7 +27,6 @@
             name="email"
             required="true"
             placeholder="awesome@tenant.com"
-            :class="{ email, error: !email.valid }"
           />
         </div>
         <div>
@@ -101,14 +100,13 @@ export default {
     async submit() {
       this.loadingTxt = true
 
-      const messageHTML = `Reason: ${this.reason}\n\rComment: ${this.message}`
+      const messageHTML = `Reason: ${this.reason}\n\rComment:\n${this.message}`
       await axios
         .post('https://formspree.io/f/mayldbzp', {
           Name: this.name,
           Email: this.email.value,
           _subject: `${this.name} | Website Contact Form`,
           Message: messageHTML,
-          Phone: '870 307-8235',
         })
         .then((response) => {
           this.name = ''
@@ -146,23 +144,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#app {
+#contact {
   display: flex;
 }
 
 /* DEFAULT */
 .vue-form {
   font-size: 16px;
-  width: 500px;
+  // width: 500px;
+  width: 90vw;
+  max-width: $max-width;
   padding: 30px;
   border-radius: 4px;
-  margin: 50px auto;
-  width: 500px;
+  margin: 40px auto;
   background-color: #fff;
   box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
 }
 .vue-form fieldset {
-  margin: 24px 0 0 0;
+  margin: 0;
 }
 .vue-form legend {
   font-size: 2em;
