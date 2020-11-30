@@ -8,7 +8,7 @@
     ></iframe>
     <div>
       <a
-        class="btn btn-primary"
+        class="primary-button"
         href="https://jessicawatts.managebuilding.com/Resident/apps/rentalapp/"
       >
         Apply Now

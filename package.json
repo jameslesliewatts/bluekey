@@ -36,6 +36,7 @@
     "net": "^1.0.2",
     "nuxt": "^2.14.0",
     "tls": "0.0.1",
+    "vue-slim-tabs": "^0.4.0",
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
