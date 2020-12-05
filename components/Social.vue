@@ -1,5 +1,5 @@
 <template>
-  <div class="social">
+  <div :key="windowWidth" class="social">
     <ul
       class="juicer-feed"
       data-feed-id="rentlittlerock"
@@ -16,12 +16,35 @@
 
 <script>
 export default {
+  data() {
+    return {
+      windowWidth: '',
+    }
+  },
+  watch: {
+    windowWidth() {
+      this.txt = `it changed to ${this.windowWidth} from`
+    },
+  },
   created() {
     if (process.client) {
       this.loadScripts()
+      this.onResize()
     }
   },
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.onResize)
+    })
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize)
+  },
   methods: {
+    onResize() {
+      this.windowWidth = window.innerWidth
+    },
     loadScripts() {
       const tag = document.createElement('script')
       tag.setAttribute('src', 'https://assets.juicer.io/embed.js')

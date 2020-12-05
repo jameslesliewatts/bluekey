@@ -16,6 +16,15 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  head() {
+    return {
+      titleTemplate: 'For Rent %s',
+    }
+  },
+}
+</script>
 <style lang="scss">
 iframe {
   margin: 0 auto;
