@@ -28,5 +28,10 @@ export default {
     )
     document.head.appendChild(embedScript)
   },
+  head() {
+    return {
+      titleTemplate: 'Furnished | ',
+    }
+  },
 }
 </script>

@@ -10,7 +10,7 @@
 </template>
 <script>
 import { Tabs, Tab } from 'vue-slim-tabs'
-import ForRent from '../ForRent.vue'
+import ForRent from '../for-rent.vue'
 import Furnished from '../Furnished.vue'
 
 export default {

@@ -6,13 +6,13 @@
       <nav id="main-nav">
         <ul id="nav-list">
           <li class="nav-item" @mouseover="moveMenuLogo(0, 3)">
-            <nuxt-link :to="{ name: 'About' }">About</nuxt-link>
+            <nuxt-link :to="{ name: 'about' }">About</nuxt-link>
           </li>
           <li class="nav-item" @mouseover="moveMenuLogo(1, 3)">
-            <nuxt-link :to="{ name: 'ForRent' }">For Rent</nuxt-link>
+            <nuxt-link :to="{ name: 'for-rent' }">For Rent</nuxt-link>
           </li>
           <li class="nav-item" @mouseover="moveMenuLogo(3, 3)">
-            <router-link :to="{ name: 'Furnished' }">Our City</router-link>
+            <router-link :to="{ name: 'furnished' }">Our City</router-link>
           </li>
           <li class="nav-item" @mouseover="moveMenuLogo(3, 1)">
             <a
