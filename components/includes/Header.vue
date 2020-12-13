@@ -11,7 +11,12 @@
             <nuxt-link to="listings">For Rent</nuxt-link>
           </li>
           <li class="nav-item" @mouseover="moveMenuLogo(3, 3)">
-            <nuxt-link to="furnished">Our City</nuxt-link>
+            <!-- <nuxt-link to="furnished">Our City</nuxt-link> -->
+            <a
+              href="https://www.airbnb.com/s/guidebooks?refinement_paths[]=/guidebooks/45658&s=67&unique_share_id=b0c92713-6dcc-4982-9bda-bcad4a00c275"
+              target="_blank"
+              >Our City</a
+            >
           </li>
           <li class="nav-item" @mouseover="moveMenuLogo(3, 1)">
             <a

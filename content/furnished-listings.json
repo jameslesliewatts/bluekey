@@ -1,13 +1,18 @@
 [
 	{
-		"name": "Charming, Private Capitol View Apartment A",
-		"dataId": 28911859,
-		"uniqueShareId": "fdd18e23-5e83-45ac-934b-acfd7e998479"
+		"name": "Private Apartment in the Heart of SoMa",
+		"dataId": 36423782,
+		"uniqueShareId": "eab49f43-2885-4a42-b2dd-a75d9dbb1e2b"
 	},
 	{
 		"name": "Charming, Private Capitol View Apartment B",
 		"dataId": 29725991,
 		"uniqueShareId": "906a6333-ec43-470d-8077-cda186d987cc"
+	},
+	{
+		"name": "Charming, Private Capitol View Apartment A",
+		"dataId": 28911859,
+		"uniqueShareId": "fdd18e23-5e83-45ac-934b-acfd7e998479"
 	},
 	{
 		"name": "Cozy, Private Apartment in Stifft Station",
@@ -28,5 +33,25 @@
 		"name": "Private Bedroom Close to Everything",
 		"dataId": 3513003,
 		"uniqueShareId": "90d3f697-65d1-4dda-92dd-c1480f529446"
+	},
+	{
+		"name": "Private Bedroom and Bathroom in Capitol View",
+		"dataId": 44317778,
+		"uniqueShareId": "6b32760b-478a-4605-8dcc-e11e1cd47e8e"
+	},
+	{
+		"name": "Super-cozy SoMa Apartment B",
+		"dataId": 22208910,
+		"uniqueShareId": "678eb8a5-2270-4d41-847b-f32d19044dfb"
+	},
+	{
+		"name": "1920's American Foursquare in Capitol View",
+		"dataId": 43665387,
+		"uniqueShareId": "875e0098-4fb0-428b-b020-e23f8a46cf71"
+	},
+	{
+		"name": "Cozy Two Bed & Two Bath SoMa Apartment",
+		"dataId": 22208903,
+		"uniqueShareId": "219e9b60-f3b9-42db-9f66-610c896529bc"
 	}
 ]

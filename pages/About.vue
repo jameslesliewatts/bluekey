@@ -47,7 +47,7 @@ export default {
       width: 100%;
       height: auto;
       max-width: 400px;
-      min-width: 320px;
+      min-width: 288px;
       border-radius: 8px;
     }
   }
@@ -69,6 +69,9 @@ export default {
   }
   @media screen and (max-width: $mobile-break) {
     flex-direction: column;
+    .bio-text-container {
+      margin-left: 0;
+    }
   }
 }
 </style>

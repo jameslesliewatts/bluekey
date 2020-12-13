@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="furnished">
     <div
       v-for="(listing, dataId) in listings"
       :key="dataId"
-      class="airbnb-embed-frame"
+      class="airbnb-embed-frame furnished-listing"
       :data-id="listing.dataId"
       data-view="home"
       style="width: 450px; height: 300px; margin: auto;"
@@ -36,13 +36,28 @@ export default {
   head() {
     return {
       titleTemplate: 'Furnished | %s',
-      script: [
-        {
-          // src: 'https://www.airbnb.com/embeddable/airbnb_jssdk',
-          // defer: true,
-        },
-      ],
+      // script: [
+      //   {
+      //     src: 'https://www.airbnb.com/embeddable/airbnb_jssdk',
+      //     defer: true,
+      //   },
+      // ],
     }
   },
 }
 </script>
+<style lang="scss" scoped>
+.furnished {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 16px;
+  .furnished-listing {
+    width: 450px;
+    height: 300px;
+    margin: auto;
+    // margin-left: 16px;
+    // width: clamp(300px, 100%, 450px);
+    // width: calc(50% - 24px);
+  }
+}
+</style>

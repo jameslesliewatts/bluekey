@@ -6,9 +6,9 @@
   font-size: 1.1rem;
   color: #fff;
   white-space: nowrap;
+  cursor: pointer;
   &:hover {
     transform: scale(1.05);
-    cursor: pointer;
   }
 }
 

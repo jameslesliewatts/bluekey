@@ -40,7 +40,6 @@ export default {
   list-style: none;
   display: flex;
   justify-content: center;
-  border-top: $bk-border;
   background-color: $bk-secondary-opacity;
   li {
     margin: 10px;
