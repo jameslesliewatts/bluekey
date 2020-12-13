@@ -1,16 +1,45 @@
-.primary-button {
+.basic-button {
   border-radius: 4px;
   text-decoration: none;
   padding: 15px 25px;
   font-weight: 700;
   font-size: 1.1rem;
   color: #fff;
-  background-color: $bk-primary;
   white-space: nowrap;
-  cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+}
+
+.primary-button {
+  @extend .basic-button;
+  background-color: $bk-primary;
   &:hover {
     background: $bk-red;
-    color: #fff;
-    transform: scale(1.05);
   }
+}
+
+.secondary-button {
+  @extend .basic-button;
+  background-color: $bk-secondary;
+  &:hover {
+    background: $bk-primary;
+  }
+}
+
+@mixin custom-button($bg, $hover-bg, $hover-text: inherit) {
+  @extend .basic-button;
+  background-color: $bg;
+  &:hover {
+    background: $hover-bg;
+    color: $hover-text;
+  }
+}
+.page-heading {
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: $bk-style;
+  margin: 40px 0;
+  font-weight: 400;
 }

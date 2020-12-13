@@ -5,13 +5,13 @@
       <nav id="main-nav">
         <ul id="nav-list">
           <li class="nav-item" @mouseover="moveMenuLogo(0, 3)">
-            <nuxt-link :to="{ name: 'about' }">About</nuxt-link>
+            <nuxt-link to="about">About</nuxt-link>
           </li>
           <li class="nav-item" @mouseover="moveMenuLogo(1, 3)">
-            <nuxt-link :to="{ name: 'for-rent' }">For Rent</nuxt-link>
+            <nuxt-link to="listings">For Rent</nuxt-link>
           </li>
           <li class="nav-item" @mouseover="moveMenuLogo(3, 3)">
-            <router-link :to="{ name: 'furnished' }">Our City</router-link>
+            <nuxt-link to="furnished">Our City</nuxt-link>
           </li>
           <li class="nav-item" @mouseover="moveMenuLogo(3, 1)">
             <a
@@ -77,43 +77,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// #main-nav {
-//   width: 100%;
-//   display: block;
-// }
-
-/* Advanced Checkbox Hack */
-// body {
-//   -webkit-animation: bugfix infinite 3s;
-// }
-// @-webkit-keyframes bugfix {
-//   from {
-//     padding: 0;
-//   }
-//   to {
-//     padding: 100;
-//   }
-// }
 $nav-margin-lg: 16px;
 $nav-margin-small: 8px;
 /* big screens */
 #header {
   display: flex;
-  @media screen and (min-width: 1232px) {
-    .buffer-left,
-    .buffer-right {
-      border: 1px solid $bk-primary;
-      width: 100%;
-      height: 333px;
-      margin-top: $nav-margin-lg;
-      min-width: $nav-margin-lg;
-      display: none;
-    }
+  .header-content {
+    max-width: $max-width;
+    width: 100vw;
+    margin: 0 auto;
   }
-}
-.header-content {
-  max-width: $max-width;
-  margin: 0 auto;
 }
 
 nav {
@@ -138,10 +111,11 @@ nav {
       margin-right: 0;
       text-transform: uppercase;
       font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
       background: $bk-secondary-opacity;
+      list-style: none;
       cursor: pointer;
       text-align: center;
       transition: box-shadow, color, opacity, padding-left 0.3s ease-in-out;
@@ -149,13 +123,19 @@ nav {
         margin-right: $nav-margin-lg;
       }
       a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: #fff;
         text-decoration: none;
-        font: 1.4em 'OptiFutura', sans-serif;
+        font-size: 1.4em;
+        font-family: $bk-style;
         font-weight: 700;
         letter-spacing: 2px;
         transition: color 0.3s ease-in-out;
         white-space: nowrap;
+        height: 100%;
+        width: 100%;
         #aspire-logo {
           width: 100px;
           margin-top: 10px;

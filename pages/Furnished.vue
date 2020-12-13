@@ -27,6 +27,7 @@ export default {
       script: [
         {
           src: 'https://www.airbnb.com/embeddable/airbnb_jssdk',
+          defer: true,
         },
       ],
     }

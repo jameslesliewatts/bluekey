@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>Who We Are</h1>
+    <h1 class="page-heading">Who We Are</h1>
     <div v-for="(bio, id) in bios.slice(0, 1)" :key="id" class="bio">
       <div class="bio-image-container bio-contents">
         <img

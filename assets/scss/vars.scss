@@ -3,9 +3,12 @@ $bk-primary: #06446c;
 $bk-primary-opacity: #{$bk-primary}80;
 $bk-secondary: #0B73B8;
 $bk-secondary-opacity: #{$bk-secondary}80;
+
 $bk-dark: #032338;
 $bk-green: #017868;
 $bk-red: #B82C49;
+$bk-dark-blue: #2c3e50;
+
 $aspire-green: #cddb00;
 
 $menu-red: hsla(11, 94%, 50%, 0.65);
@@ -19,7 +22,10 @@ $footer-height: 300px;
 $max-width: 1200px;
 $mobile-break: 700px;
 
-$dark-blue: #2c3e50;
+// FONTS
+$bk-style: 'OptiFutura', sans-serif;
+$bk-border: 1px solid $bk-primary;
+
 // MIXINS
 
 // @mixin color-opacity('base', 'opc') {

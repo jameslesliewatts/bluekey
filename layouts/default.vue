@@ -31,7 +31,7 @@ export default {
   .main-content {
     text-align: center;
     .page-content {
-      max-width: $max-width;
+      // max-width: $max-width;
     }
   }
 }

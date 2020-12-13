@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <div class="headline">
+    <h1 class="headline">
       Blue Key Property Mgmt.
-    </div>
+    </h1>
     <div class="links parallax">
       <nuxt-link
         to="listings"
@@ -18,10 +18,6 @@
         class="btn btn-secondary"
         >I Need A Property Manager</nuxt-link
       >
-      <!-- <script
-        async
-        src="https://www.rentometer.com/leadgen/load.js?api_key=zgmY1IiRLuym_7mbzouOow"
-      ></script> -->
       <div
         class="rentometer-leadgen"
         data-button-text="FREE Rent Analysis"
@@ -41,8 +37,8 @@ export default {
       titleTemplate: 'Home | %s',
       script: [
         {
-          // eslint-disable-next-line prettier/prettier
-          src: 'https://www.rentometer.com/leadgen/load.js?api_key=zgmY1IiRLuym_7mbzouOow',
+          src:
+            'https://www.rentometer.com/leadgen/load.js?api_key=zgmY1IiRLuym_7mbzouOow',
           defer: true,
         },
       ],
@@ -53,10 +49,8 @@ export default {
 
 <style lang="scss" scoped>
 .headline {
+  @extend .page-heading;
   font-size: 4rem;
-  text-transform: uppercase;
-  font-family: 'OptiFutura', sans-serif;
-  margin: 40px 0;
 }
 .links {
   background-image: linear-gradient($bk-primary-opacity, $bk-primary-opacity),
