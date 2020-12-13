@@ -11,14 +11,14 @@
 <script>
 import { Tabs, Tab } from 'vue-slim-tabs'
 import ForRent from '../for-rent.vue'
-import Furnished from '../Furnished.vue'
+// import Furnished from '../furnished.vue'
 
 export default {
   components: {
     Tabs,
     Tab,
     ForRent,
-    Furnished,
+    // Furnished,
   },
 }
 </script>

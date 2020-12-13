@@ -2,7 +2,7 @@
   <div class="main-layout-container">
     <div class="main-content">
       <site-header />
-      <nuxt />
+      <nuxt class="page-content" />
       <contact />
     </div>
     <site-footer />
@@ -25,13 +25,14 @@ export default {
 }
 </script>
 <style lang="scss">
-@import '@/assets/scss/main';
-
 .main-layout-container {
   position: relative;
   min-height: 100vh;
   .main-content {
     text-align: center;
+    .page-content {
+      max-width: $max-width;
+    }
   }
 }
 </style>

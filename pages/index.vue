@@ -5,23 +5,23 @@
     </div>
     <div class="links parallax">
       <nuxt-link
-        to="Listings"
+        to="listings"
         target="_blank"
         rel="noopener noreferrer"
         class="btn btn-secondary"
         >I Need A Home</nuxt-link
       >
       <nuxt-link
-        to="About"
+        to="about"
         target="_blank"
         rel="noopener noreferrer"
         class="btn btn-secondary"
         >I Need A Property Manager</nuxt-link
       >
-      <script
+      <!-- <script
         async
         src="https://www.rentometer.com/leadgen/load.js?api_key=zgmY1IiRLuym_7mbzouOow"
-      ></script>
+      ></script> -->
       <div
         class="rentometer-leadgen"
         data-button-text="FREE Rent Analysis"
@@ -36,6 +36,18 @@ import SocialFeed from '../components/Social.vue'
 
 export default {
   components: { SocialFeed },
+  head() {
+    return {
+      titleTemplate: 'Home | %s',
+      script: [
+        {
+          // eslint-disable-next-line prettier/prettier
+          src: 'https://www.rentometer.com/leadgen/load.js?api_key=zgmY1IiRLuym_7mbzouOow',
+          defer: true,
+        },
+      ],
+    }
+  },
 }
 </script>
 
@@ -61,7 +73,7 @@ export default {
     @extend .primary-button;
     margin-right: 10px;
   }
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: $mobile-break) {
     flex-direction: column;
     .btn {
       margin-bottom: 10px;

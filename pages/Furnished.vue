@@ -20,17 +20,15 @@
 </template>
 <script>
 export default {
-  mounted() {
-    const embedScript = document.createElement('script')
-    embedScript.setAttribute(
-      'src',
-      'https://www.airbnb.com/embeddable/airbnb_jssdk'
-    )
-    document.head.appendChild(embedScript)
-  },
+  name: 'Furnished',
   head() {
     return {
-      titleTemplate: 'Furnished | ',
+      titleTemplate: 'Furnished | %s',
+      script: [
+        {
+          src: 'https://www.airbnb.com/embeddable/airbnb_jssdk',
+        },
+      ],
     }
   },
 }

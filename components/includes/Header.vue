@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 <template>
   <div id="header">
-    <div class="buffer-left"></div>
     <div class="header-content">
       <nav id="main-nav">
         <ul id="nav-list">
@@ -48,7 +47,6 @@
         ></div>
       </div>
     </div>
-    <div class="buffer-right"></div>
   </div>
 </template>
 
@@ -160,6 +158,7 @@ nav {
         white-space: nowrap;
         #aspire-logo {
           width: 100px;
+          margin-top: 10px;
         }
       }
       &:hover {
@@ -193,7 +192,7 @@ nav {
   }
 }
 /* small screens */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: $mobile-break) {
   nav {
     #nav-list {
       // visibility: hidden;

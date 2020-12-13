@@ -26,30 +26,20 @@ export default {
       this.txt = `it changed to ${this.windowWidth} from`
     },
   },
-  created() {
-    if (process.client) {
-      this.loadScripts()
-      this.onResize()
+  head() {
+    return {
+      script: [
+        {
+          src: 'https://assets.juicer.io/embed.js',
+        },
+      ],
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://assets.juicer.io/embed.css',
+        },
+      ],
     }
-  },
-  mounted() {
-    this.$nextTick(() => {
-      window.addEventListener('resize', this.onResize)
-    })
-  },
-
-  beforeDestroy() {
-    window.removeEventListener('resize', this.onResize)
-  },
-  methods: {
-    onResize() {
-      this.windowWidth = window.innerWidth
-    },
-    loadScripts() {
-      const tag = document.createElement('script')
-      tag.setAttribute('src', 'https://assets.juicer.io/embed.js')
-      document.head.appendChild(tag)
-    },
   },
 }
 </script>

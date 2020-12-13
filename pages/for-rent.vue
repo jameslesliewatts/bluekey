@@ -20,7 +20,7 @@
 export default {
   head() {
     return {
-      titleTemplate: 'For Rent %s',
+      titleTemplate: 'For Rent | %s',
     }
   },
 }
