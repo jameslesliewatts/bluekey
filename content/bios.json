@@ -10,22 +10,25 @@
 		},
 		"phone": "(501) 313-3793",
 		"email": "jesi@bluekeypropertymgmt.com",
-		"title": "Owner",
+		"title": "Property Manager",
 		"funFact": "Husband is constantly spouting off fun facts and she tunes them out.",
 		"hometown": "",
-		"bio": "Owns this place, worries about Cohen, has a super cool husband."
+		"bio": "Owns this place, worries about Cohen, has a super cool husband.<br><br>Integer eu nisi finibus, suscipit turpis et, pulvinar tortor. Nam augue nisi, ultricies in accumsan id, pretium eget lacus. Integer eu nisi finibus, suscipit turpis et, pulvinar tortor. Nam augue nisi, ultricies in accumsan id, pretium eget lacus."
 	},
 	{
 		"id": 2,
 		"firstName": "Lacey",
 		"middleName": "",
 		"lastName": "Roark",
-		"profileImg": "",
-		"phone": "",
-		"email": "",
-		"title": "",
-		"funFact": "",
+		"profileImg": {
+			"src":"lacey-headshot",
+			"alt":"Lacey's profile picture"
+		},
+		"phone": "(501) 313-3793",
+		"email": "lacey@bluekeypropertymgmt.com",
+		"title": "Director of Operations",
+		"funFact": "Husband is cool and great at drums.",
 		"hometown": "",
-		"bio": ""
+		"bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper porttitor nibh vitae malesuada. Morbi congue magna est, ornare tempor mauris tristique a.<br><br>Maecenas tempus commodo ex, et condimentum eros vestibulum ac. Mauris feugiat at lectus eget consequat."
 	}
 ]

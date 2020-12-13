@@ -31,12 +31,4 @@ export default {
   },
 }
 </script>
-
-<style src="vue-slim-tabs/themes/default.css"></style>
-
-<style lang="scss" scoped>
-// .listing-tabs {
-//   justify-content: center;
-//   display: flex;
-// }
-</style>
+<style lang="scss" scoped></style>

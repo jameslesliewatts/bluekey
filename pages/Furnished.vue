@@ -1,33 +1,45 @@
 <template>
   <div>
     <div
+      v-for="(listing, dataId) in listings"
+      :key="dataId"
       class="airbnb-embed-frame"
-      data-id="29725991"
+      :data-id="listing.dataId"
       data-view="home"
       style="width: 450px; height: 300px; margin: auto;"
     >
       <a
-        href="https://www.airbnb.com/rooms/29725991?s=66&amp;unique_share_id=906a6333-ec43-470d-8077-cda186d987cc&amp;source=embed_widget"
+        :href="`https://www.airbnb.com/rooms/${dataId}?s=66&amp;unique_share_id=${listing.uniqueShareId}&amp;source=embed_widget`"
         >View On Airbnb</a
-      >
-      <a
-        href="https://www.airbnb.com/rooms/29725991?s=66&amp;unique_share_id=906a6333-ec43-470d-8077-cda186d987cc&amp;source=embed_widget"
+      ><a
+        :href="`https://www.airbnb.com/rooms/${dataId}?s=66&amp;unique_share_id=${listing.uniqueShareId}&amp;source=embed_widget`"
         rel="nofollow"
-        >Charming, Capitol View Apartment B</a
+        >{{ listing.name }}</a
       >
+      <script
+        async=""
+        src="https://www.airbnb.com/embeddable/airbnb_jssdk"
+      ></script>
     </div>
   </div>
 </template>
 <script>
+import Listings from '../content/furnished-listings.json'
+
 export default {
   name: 'Furnished',
+  data() {
+    return {
+      listings: Listings,
+    }
+  },
   head() {
     return {
       titleTemplate: 'Furnished | %s',
       script: [
         {
-          src: 'https://www.airbnb.com/embeddable/airbnb_jssdk',
-          defer: true,
+          // src: 'https://www.airbnb.com/embeddable/airbnb_jssdk',
+          // defer: true,
         },
       ],
     }

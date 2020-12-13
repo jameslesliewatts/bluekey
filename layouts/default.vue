@@ -30,9 +30,6 @@ export default {
   min-height: 100vh;
   .main-content {
     text-align: center;
-    .page-content {
-      // max-width: $max-width;
-    }
   }
 }
 </style>

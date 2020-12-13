@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1 class="page-heading">Who We Are</h1>
-    <div v-for="(bio, id) in bios.slice(0, 1)" :key="id" class="bio">
+    <div v-for="(bio, id) in bios" :key="id" class="bio">
       <div class="bio-image-container bio-contents">
         <img
           :src="require(`~/assets/images/bios/${bio.profileImg.src}.jpg`)"
@@ -10,7 +10,10 @@
         />
       </div>
       <div class="bio-text-container bio-contents">
-        <h2 class="name">{{ bio.firstName }} {{ bio.lastName }}</h2>
+        <h2 class="bio-name">{{ bio.firstName }} {{ bio.lastName }}</h2>
+        <h4 class="bio-title">{{ bio.title }} &bull; {{ bio.email }}</h4>
+        <p class="bio-text" v-html="bio.bio"></p>
+        <p class="bio-fun-fact"><strong>Fun Fact:</strong> {{ bio.funFact }}</p>
       </div>
     </div>
   </div>
@@ -34,14 +37,34 @@ export default {
 <style lang="scss">
 .bio {
   display: flex;
-  .bio-contents {
-    padding: 10px;
-  }
+  justify-content: center;
+  max-width: $max-width;
+  margin: 0 auto 32px;
+  width: 90vw;
   .bio-image-container {
-    width: 100%;
+    // width: 40%;
     .bio-image {
       width: 100%;
       height: auto;
+      max-width: 400px;
+      min-width: 320px;
+      border-radius: 8px;
+    }
+  }
+  .bio-text-container {
+    text-align: left;
+    margin-left: 16px;
+    .bio-name {
+      border-bottom: $bk-border;
+    }
+    .bio-title {
+      font-size: 0.8rem;
+    }
+    p {
+      margin-top: 16px;
+      font-size: 1.1rem;
+    }
+    .bio-text {
     }
   }
   @media screen and (max-width: $mobile-break) {

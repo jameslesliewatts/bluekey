@@ -194,7 +194,6 @@ nav {
           }
         }
       }
-      // flex-direction: column;
     }
   }
   .welcome-bar {
