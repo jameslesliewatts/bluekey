@@ -1,4 +1,4 @@
-import rules from '../pages/rules/rules.json'
+import rules from '../content/rules.json'
 
 export const state = () => ({
   listings: {},

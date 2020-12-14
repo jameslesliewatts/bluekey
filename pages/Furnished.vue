@@ -16,10 +16,10 @@
         rel="nofollow"
         >{{ listing.name }}</a
       >
-      <script
+      <!-- <script
         async=""
         src="https://www.airbnb.com/embeddable/airbnb_jssdk"
-      ></script>
+      ></script> -->
     </div>
   </div>
 </template>
@@ -36,12 +36,13 @@ export default {
   head() {
     return {
       titleTemplate: 'Furnished | %s',
-      // script: [
-      //   {
-      //     src: 'https://www.airbnb.com/embeddable/airbnb_jssdk',
-      //     defer: true,
-      //   },
-      // ],
+      script: [
+        {
+          src: 'https://www.airbnb.com/embeddable/airbnb_jssdk',
+          async: true,
+          body: true,
+        },
+      ],
     }
   },
 }
@@ -55,9 +56,6 @@ export default {
     width: 450px;
     height: 300px;
     margin: auto;
-    // margin-left: 16px;
-    // width: clamp(300px, 100%, 450px);
-    // width: calc(50% - 24px);
   }
 }
 </style>
