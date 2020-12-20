@@ -12,10 +12,10 @@
   </div>
 </template>
 <script>
-import Tabs from '../../components/Tabs.vue'
-import Tab from '../../components/Tab.vue'
-import ForRent from '../for-rent.vue'
-import Furnished from '../furnished.vue'
+import Tabs from '@/components/Tabs.vue'
+import Tab from '@/components/Tab.vue'
+import ForRent from '@/components/listings/for-rent.vue'
+import Furnished from '@/components/listings/furnished.vue'
 
 export default {
   components: {

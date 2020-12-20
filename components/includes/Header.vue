@@ -5,13 +5,13 @@
       <nav id="main-nav">
         <ul id="nav-list">
           <li class="nav-item" @mouseover="moveMenuLogo(0, 3)">
-            <router-link to="/">Home</router-link>
-          </li>
-          <li class="nav-item" @mouseover="moveMenuLogo(0, 3)">
             <nuxt-link to="about">About</nuxt-link>
           </li>
           <li class="nav-item" @mouseover="moveMenuLogo(1, 3)">
             <nuxt-link to="listings">For Rent</nuxt-link>
+          </li>
+          <li class="nav-item" @mouseover="moveMenuLogo(3, 3)">
+            <nuxt-link to="/">Home</nuxt-link>
           </li>
           <!-- <li class="nav-item" @mouseover="moveMenuLogo(3, 3)">
             <nuxt-link to="furnished">Our City</nuxt-link>
@@ -45,9 +45,9 @@
           :style="flexSizeLeft"
         ></div>
         <div class="logo-container">
-          <router-link to="/">
+          <nuxt-link to="/">
             <img id="logo" src="@/assets/images/main-logo.png" alt="logo" />
-          </router-link>
+          </nuxt-link>
         </div>
         <div
           class="welcome-block welcome-block-right"
@@ -62,32 +62,23 @@
 export default {
   data() {
     return {
-      flexSizeLeft: 'flex-grow: 1',
-      flexSizeRight: 'flex-grow: 3',
+      flexSizeLeft: '',
+      flexSizeRight: '',
     }
   },
-  computed: {},
   methods: {
     moveMenuLogo(left, right) {
       this.flexSizeLeft = `flex-grow: ${left}`
       this.flexSizeRight = `flex-grow: ${right}`
-    },
-    toggleNav() {
-      const navList = document.getElementById('nav-list')
-      if (navList.style.display === 'block') {
-        navList.style.display = 'none'
-      } else {
-        navList.style.display = 'block'
-      }
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-$nav-margin-lg: 16px;
-$nav-margin-small: 8px;
-/* big screens */
+$nav-margin-lg: $lg-margin;
+$nav-margin-small: $sm-margin;
+
 #header {
   display: flex;
   .header-content {
@@ -119,9 +110,6 @@ nav {
       margin-right: 0;
       text-transform: uppercase;
       font-weight: 700;
-      // display: flex;
-      // align-items: center;
-      // justify-content: center;
       background: $bk-secondary-opacity;
       list-style: none;
       cursor: pointer;
@@ -146,7 +134,6 @@ nav {
         width: 100%;
         #aspire-logo {
           width: 100px;
-          margin-top: 10px;
         }
       }
       &:hover {
@@ -164,6 +151,12 @@ nav {
     transition: 1s ease;
     min-width: $nav-margin-lg;
     margin: 0 $nav-margin-lg;
+    &-left {
+      flex-grow: 1;
+    }
+    &-right {
+      flex-grow: 3;
+    }
   }
   .logo-container {
     display: flex;
@@ -179,14 +172,11 @@ nav {
     }
   }
 }
+
 /* small screens */
 @media screen and (max-width: $mobile-break) {
   nav {
     #nav-list {
-      // visibility: hidden;
-      &.is-shown {
-        visibility: visible;
-      }
       .nav-item {
         height: 64px;
         margin: $nav-margin-small;
@@ -207,10 +197,10 @@ nav {
   .welcome-bar {
     .welcome-block {
       min-width: $nav-margin-small;
-      // min-width: 0;
       margin: 0;
       &-left {
         margin-left: $nav-margin-small;
+        flex-grow: 3;
       }
       &-right {
         margin-right: $nav-margin-small;
@@ -218,6 +208,9 @@ nav {
     }
     .logo-container {
       margin: 0 $nav-margin-small;
+      #logo {
+        width: calc(20vw - 3.2em);
+      }
     }
   }
 }

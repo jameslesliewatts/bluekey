@@ -24,7 +24,7 @@
   </div>
 </template>
 <script>
-import Listings from '../content/furnished-listings.json'
+import Listings from '@/content/furnished-listings.json'
 
 export default {
   name: 'Furnished',
@@ -51,7 +51,7 @@ export default {
 .furnished {
   display: flex;
   flex-wrap: wrap;
-  margin-right: 16px;
+  margin-right: $lg-margin;
   .furnished-listing {
     width: 450px;
     height: 300px;

@@ -26,8 +26,6 @@ $mobile-break: 700px;
 $bk-style: 'OptiFutura', sans-serif;
 $bk-border: 1px solid $bk-primary;
 
-// MIXINS
-
-// @mixin color-opacity('base', 'opc') {
-// 	color: #{base}#{opc}
-// };
+// MARGINS
+$sm-margin: 8px;
+$lg-margin: 16px;

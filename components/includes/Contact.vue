@@ -115,8 +115,6 @@ export default {
           this.message = ''
           this.loadingTxt = false
           this.submitted = true
-          // i redirect my app to '/success' route once payload completed.
-          // this.$router.push({ path: '/success' })
         })
         .catch((error) => {
           console.log(error)
@@ -151,7 +149,6 @@ export default {
 /* DEFAULT */
 .vue-form {
   font-size: 16px;
-  // width: 500px;
   width: 90vw;
   max-width: $max-width;
   padding: 30px;

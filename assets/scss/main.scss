@@ -3,6 +3,7 @@
     src: local("OptiFutura"),
     url(~assets/fonts/OPTIFuturaAgMite-Four/OPTIFuturaAgMite-Four.otf) format("opentype");
 }
+@import './vars.scss';
 
 *,
 *::before,
@@ -53,4 +54,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  @media screen and (max-width: $mobile-break) {
+    background-attachment: scroll;
+  }
 }

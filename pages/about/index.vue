@@ -19,7 +19,7 @@
   </div>
 </template>
 <script>
-import Bios from '../content/bios.json'
+import Bios from '@/content/bios.json'
 
 export default {
   data() {
@@ -42,7 +42,6 @@ export default {
   margin: 0 auto 32px;
   width: 90vw;
   .bio-image-container {
-    // width: 40%;
     .bio-image {
       width: 100%;
       height: auto;
@@ -53,7 +52,7 @@ export default {
   }
   .bio-text-container {
     text-align: left;
-    margin-left: 16px;
+    margin-left: $lg-margin;
     .bio-name {
       border-bottom: $bk-border;
     }
@@ -61,7 +60,7 @@ export default {
       font-size: 0.8rem;
     }
     p {
-      margin-top: 16px;
+      margin-top: $lg-margin;
       font-size: 1.1rem;
     }
     .bio-text {

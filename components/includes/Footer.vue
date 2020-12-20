@@ -77,7 +77,7 @@
       text-align: right;
     }
     p {
-      padding-bottom: 8px;
+      padding-bottom: $sm-margin;
     }
     a {
       color: #fff;
@@ -91,7 +91,7 @@
     height: 100px;
     align-items: center;
     img {
-      margin: 8px 0;
+      margin: $sm-margin 0;
       &#aspire-logo {
         // width: clamp(50px, 30vw, 200px);
         height: 64%;

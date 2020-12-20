@@ -39,11 +39,10 @@ export default {
   },
 }
 </script>
-<style>
+<style lang="scss">
 .single-listing {
-  /* border: 2px solid green; */
-  padding: 8px;
-  margin: 16px auto;
+  padding: $sm-margin;
+  margin: $lg-margin auto;
   width: 400px;
   height: 400px;
   background-size: cover;
