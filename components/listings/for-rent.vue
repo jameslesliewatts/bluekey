@@ -2,7 +2,6 @@
   <div>
     <iframe
       src="https://jessicawatts.managebuilding.com/Resident/Public/Rentals?hidenav=true"
-      height="400"
       frameborder="0"
     ></iframe>
     <div class="apply-button">
@@ -32,6 +31,10 @@ iframe {
   margin: 0 auto;
   max-width: $max-width;
   width: $container-width;
+  min-height: 600px;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: stretch;
 }
 /deep/
   html
