@@ -149,7 +149,7 @@ export default {
 /* DEFAULT */
 .vue-form {
   font-size: 16px;
-  width: 90vw;
+  width: $container-width;
   max-width: $max-width;
   padding: 30px;
   border-radius: 4px;

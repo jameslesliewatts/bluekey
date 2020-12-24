@@ -27,6 +27,13 @@ export default {
   head() {
     return {
       titleTemplate: 'Listings | %s',
+      script: [
+        {
+          src: 'https://www.airbnb.com/embeddable/airbnb_jssdk',
+          async: true,
+          body: true,
+        },
+      ],
     }
   },
 }

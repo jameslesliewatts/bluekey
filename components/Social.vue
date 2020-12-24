@@ -49,7 +49,7 @@ export default {
 
 .social {
   max-width: $max-width;
-  width: 90vw;
+  width: $container-width;
   margin: 0 auto;
 }
 </style>

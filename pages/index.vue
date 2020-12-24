@@ -4,18 +4,8 @@
       Blue Key Property Mgmt.
     </h1>
     <div class="links parallax">
-      <nuxt-link
-        to="listings"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn btn-secondary"
-        >I Need A Home</nuxt-link
-      >
-      <nuxt-link
-        to="about"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn btn-secondary"
+      <nuxt-link to="listings" class="primary-button">I Need A Home</nuxt-link>
+      <nuxt-link to="about" class="primary-button"
         >I Need A Property Manager</nuxt-link
       >
       <div
@@ -28,7 +18,7 @@
 </template>
 
 <script>
-import SocialFeed from '../components/Social.vue'
+import SocialFeed from '@/components/Social.vue'
 
 export default {
   components: { SocialFeed },
@@ -37,8 +27,7 @@ export default {
       titleTemplate: 'Home | %s',
       script: [
         {
-          src:
-            'https://www.rentometer.com/leadgen/load.js?api_key=zgmY1IiRLuym_7mbzouOow',
+          src: `https://www.rentometer.com/leadgen/load.js?api_key=${process.env.RO_API_KEY}`,
           defer: true,
         },
       ],
@@ -63,20 +52,19 @@ export default {
   height: 50vh;
   max-height: 500px;
   margin-bottom: 40px;
-  .btn {
-    @extend .primary-button;
+  .primary-button {
     margin-right: 10px;
   }
   @media screen and (max-width: $mobile-break) {
     flex-direction: column;
-    .btn {
+    .primary-button {
       margin-bottom: 10px;
     }
   }
   // THIS OVERWRITES STYLES FOR RENTOMETER BUTTON
   /deep/ #romLeadGenBtn0 {
     font-size: 1.1rem !important;
-    @extend .btn;
+    @extend .primary-button;
   }
 }
 </style>

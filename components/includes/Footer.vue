@@ -61,7 +61,7 @@
   height: fit-content;
   .bottom,
   .top {
-    width: 90vw;
+    width: $container-width;
     max-width: $max-width;
     margin: 0 auto;
     display: flex;
@@ -93,10 +93,8 @@
     img {
       margin: $sm-margin 0;
       &#aspire-logo {
-        // width: clamp(50px, 30vw, 200px);
         height: 64%;
         width: auto;
-        // margin-top: 26%;
       }
       &#bk-logo {
         height: 100%;

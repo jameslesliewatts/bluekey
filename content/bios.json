@@ -5,7 +5,7 @@
 		"middleName": "Barnes",
 		"lastName": "Watts",
 		"profileImg": {
-			"src":"jesi-cohen-regi",
+			"src":"jesi-headshot-2",
 			"alt":"Jesi's profile picture"
 		},
 		"phone": "(501) 313-3793",
@@ -13,7 +13,7 @@
 		"title": "Property Manager",
 		"funFact": "Husband is constantly spouting off fun facts and she tunes them out.",
 		"hometown": "",
-		"bio": "Owns this place, worries about Cohen, has a super cool husband.<br><br>Integer eu nisi finibus, suscipit turpis et, pulvinar tortor. Nam augue nisi, ultricies in accumsan id, pretium eget lacus. Integer eu nisi finibus, suscipit turpis et, pulvinar tortor. Nam augue nisi, ultricies in accumsan id, pretium eget lacus."
+		"bio": "<p>Jessica Barnes Watts (Jesi) is a Property Manager for Blue Key Property Mgmt. and Aspire Realty Group. Jesi started managing her first property in 2014, an AirBnB in Little Rock, Arkansas, and was hooked on real estate management.</p><p>Jesi got her Bachelor's degree in Advertising/Public Relations in 2002 from UA Little Rock and her Master of Business Administration in 2007, also from UA Little Rock. After spending the last couple of years teaching EAST at Pulaski Heights Middle (Go Panthers!) she decided to make property management her full time gig in 2019.</p><p>Jesi feels that customer service is the most important part of property management and is committed to bringing together the perfect tenants for the perfect property.</p><p>In her spare time (haha) she enjoys spending time with her son, Cohen, and her husband, James, reading, and pre-pandemic activities like eating in restaurants and actually talking to friends in public.</p>"
 	},
 	{
 		"id": 2,
@@ -29,6 +29,6 @@
 		"title": "Director of Operations",
 		"funFact": "Husband is cool and great at drums.",
 		"hometown": "",
-		"bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper porttitor nibh vitae malesuada. Morbi congue magna est, ornare tempor mauris tristique a.<br><br>Maecenas tempus commodo ex, et condimentum eros vestibulum ac. Mauris feugiat at lectus eget consequat."
+		"bio": "Bio coming soon."
 	}
 ]

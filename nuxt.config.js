@@ -21,7 +21,13 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content:
+          'Blue Key Property Management is a property management company located in Little Rock, AR. It is a division of Aspire Realty Group. What sets us apart is our dedication to excellent customer service to both owners and tenants as well as a strong sense of responsibility to go above and beyond for everyone who counts on us.',
+      },
+      {
+        hid: 'ogtitle',
+        name: 'og:title',
+        content: 'Blue Key Property Mgmt.',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -68,6 +74,7 @@ export default {
     '@nuxtjs/style-resources',
     'nuxt-webfontloader',
   ],
+  noscript: [{ innerHTML: 'This website requires JavaScript.' }],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options

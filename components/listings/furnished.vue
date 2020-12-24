@@ -36,13 +36,13 @@ export default {
   head() {
     return {
       titleTemplate: 'Furnished | %s',
-      script: [
-        {
-          src: 'https://www.airbnb.com/embeddable/airbnb_jssdk',
-          async: true,
-          body: true,
-        },
-      ],
+      // script: [
+      //   {
+      //     src: 'https://www.airbnb.com/embeddable/airbnb_jssdk',
+      //     async: true,
+      //     body: true,
+      //   },
+      // ],
     }
   },
 }

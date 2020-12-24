@@ -2,11 +2,10 @@
   <div>
     <iframe
       src="https://jessicawatts.managebuilding.com/Resident/Public/Rentals?hidenav=true"
-      width="801"
       height="400"
       frameborder="0"
     ></iframe>
-    <div>
+    <div class="apply-button">
       <a
         class="primary-button"
         href="https://jessicawatts.managebuilding.com/Resident/apps/rentalapp/"
@@ -26,7 +25,20 @@ export default {
 }
 </script>
 <style lang="scss">
+.apply-button {
+  margin-top: 32px;
+}
 iframe {
   margin: 0 auto;
+  max-width: $max-width;
+  width: $container-width;
+}
+/deep/
+  html
+  > body
+  > div
+  > div
+  > div.hide--desktop.column.column--md12.column--sm12 {
+  display: none !important;
 }
 </style>
