@@ -45,7 +45,7 @@
       />
     </div>
     <div class="copyright">
-      <p>&copy; 2020 - jlwDevs</p>
+      <p>&copy; 2021 - jlw</p>
     </div>
   </div>
 </template>

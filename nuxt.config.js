@@ -24,10 +24,18 @@ export default {
         content:
           'Blue Key Property Management is a property management company located in Little Rock, AR. It is a division of Aspire Realty Group. What sets us apart is our dedication to excellent customer service to both owners and tenants as well as a strong sense of responsibility to go above and beyond for everyone who counts on us.',
       },
+      { hid: 'og:title', name: 'og:title', content: 'Blue Key Property Mgmt.' },
       {
-        hid: 'ogtitle',
-        name: 'og:title',
-        content: 'Blue Key Property Mgmt.',
+        hid: 'og:image',
+        name: 'og:image',
+        property: 'og:image',
+        content: 'http://bluekeypropertymgmt.com/logo-og.png',
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        property: 'og:description',
+        content: 'Property Management for Central Arkansas',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
